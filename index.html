@@ -1,1 +1,229 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahaleti●رحلاتي</title>
+<style>
+:root {
+  --navy:#123047;
+  --gold:#D4AF37;
+  --light:#f6f8fa;
+}
+* {box-sizing:border-box}
+body {
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:var(--light);
+  color:var(--navy);
+}
+header {
+  background:var(--navy);
+  color:white;
+  padding:16px;
+}
+.top {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.logo {
+  font-size:23px;
+  font-weight:bold;
+  color:var(--gold);
+}
+button {
+  border:0;
+  border-radius:8px;
+  padding:11px 16px;
+  cursor:pointer;
+  font-weight:bold;
+}
+.lang {background:white;color:var(--navy)}
+.organizer {background:var(--gold);color:var(--navy)}
+nav {
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  padding:13px;
+  background:white;
+  position:sticky;
+  top:0;
+  z-index:5;
+  overflow:auto;
+}
+nav a {
+  text-decoration:none;
+  color:var(--navy);
+  white-space:nowrap;
+  font-weight:bold;
+}
+.banner {
+  background:var(--navy);
+  color:white;
+  text-align:center;
+  padding:45px 18px;
+}
+.banner h1 {color:var(--gold);font-size:30px}
+.banner p {font-size:18px;line-height:1.8}
+.banner button {background:var(--gold);color:var(--navy)}
+section {padding:22px 16px}
+h2 {
+  border-right:4px solid var(--gold);
+  padding-right:10px;
+}
+.categories {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:12px;
+}
+.category {
+  background:white;
+  padding:20px 12px;
+  text-align:center;
+  border-radius:12px;
+  box-shadow:0 2px 8px #00000010;
+}
+.category .emoji {font-size:32px}
+.cards {
+  background:white;
+  border-radius:12px;
+  padding:20px;
+  text-align:center;
+  margin:12px 0;
+  box-shadow:0 2px 8px #00000010;
+}
+.placeholder {
+  color:#64748b;
+  line-height:1.8;
+}
+footer {
+  background:var(--navy);
+  color:white;
+  text-align:center;
+  padding:25px;
+  line-height:2;
+}
+.gold {color:var(--gold)}
+</style>
+</head>
+<body>
+
+<header>
+<div class="top">
+<div class="logo">Rahaleti●رحلاتي</div>
+<button class="lang" onclick="toggleLang()">Français</button>
+<button class="organizer" onclick="alert('فضاء منظمي الرحلات')">
+فضاء المنظمين
+</button>
+</div>
+</header>
+
+<nav id="nav">
+<a href="#home">الرئيسية</a>
+<a href="#trips">الرحلات</a>
+<a href="#destinations">الوجهات</a>
+<a href="#ads">الإعلانات</a>
+<a href="#more">المزيد</a>
+</nav>
+
+<div class="banner" id="home">
+<h1 id="welcome">اكتشف رحلتك القادمة مع رحالتي</h1>
+<p id="intro">
+اكتشف أجمل الرحلات والوجهات السياحية
+<br>
+واستمتع بتجارب جديدة مع منظمي الرحلات.
+</p>
+<button onclick="document.getElementById('trips').scrollIntoView()">
+اكتشف الرحلات
+</button>
+</div>
+
+<section id="trips">
+<h2>🧭 أقسام الرحلات</h2>
+<div class="categories">
+<div class="category">
+<div class="emoji">🚌</div>
+<strong>الرحلات الداخلية</strong>
+<p>اكتشف تونس</p>
+</div>
+<div class="category">
+<div class="emoji">✈️</div>
+<strong>الرحلات الخارجية</strong>
+<p>اكتشف العالم</p>
+</div>
+<div class="category">
+<div class="emoji">🎉</div>
+<strong>التظاهرات والفعاليات</strong>
+<p>أنشطة ومناسبات</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>⭐ الرحلات المميزة</h2>
+<div class="cards placeholder">ستظهر هنا الرحلات المميزة</div>
+</section>
+
+<section>
+<h2>💰 الرحلات الممولة</h2>
+<div class="cards placeholder">ستظهر هنا الرحلات الممولة</div>
+</section>
+
+<section>
+<h2>🆕 أحدث الرحلات</h2>
+<div class="cards placeholder">ستظهر هنا أحدث الرحلات المنشورة</div>
+</section>
+
+<section>
+<h2>👥 منظمو الرحلات</h2>
+<div class="cards placeholder">اكتشف منظمي الرحلات وملفاتهم العامة</div>
+</section>
+
+<section id="destinations">
+<h2>🌍 الوجهات السياحية</h2>
+<div class="cards placeholder">تونس والعالم</div>
+</section>
+
+<section id="ads">
+<h2>📢 الإعلانات التجارية</h2>
+<div class="cards placeholder">مطاعم، فنادق، خدمات وأنشطة سياحية</div>
+</section>
+
+<section id="more">
+<h2>ℹ️ المزيد</h2>
+<div class="cards placeholder">
+الأسئلة الشائعة – الأخبار – التواصل – شروط المنصة
+</div>
+</section>
+
+<footer>
+<strong class="gold">Rahaleti●رحلاتي</strong>
+<p>منصة اكتشاف الرحلات والوجهات السياحية</p>
+<p>Soufnaj41@gmail.com</p>
+</footer>
+
+<script>
+let french=false;
+function toggleLang(){
+ french=!french;
+ document.documentElement.lang=french?'fr':'ar';
+ document.documentElement.dir=french?'ltr':'rtl';
+ document.getElementById('welcome').textContent=
+ french?'Découvrez votre prochain voyage avec Rahaleti':'اكتشف رحلتك القادمة مع رحالتي';
+ document.getElementById('intro').textContent=
+ french?'Découvrez les plus beaux voyages et destinations touristiques.':'اكتشف أجمل الرحلات والوجهات السياحية واستمتع بتجارب جديدة مع منظمي الرحلات.';
+ document.querySelector('.lang').textContent=french?'العربية':'Français';
+ document.querySelector('.organizer').textContent=french?'Espace organisateurs':'فضاء المنظمين';
+ document.querySelector('.banner button').textContent=french?'Découvrir les voyages':'اكتشف الرحلات';
+ document.getElementById('nav').innerHTML=french?
+ '<a href="#home">Accueil</a><a href="#trips">Voyages</a><a href="#destinations">Destinations</a><a href="#ads">Publicités</a><a href="#more">Plus</a>':
+ '<a href="#home">الرئيسية</a><a href="#trips">الرحلات</a><a href="#destinations">الوجهات</a><a href="#ads">الإعلانات</a><a href="#more">المزيد</a>';
+}
+</script>
+</body>
+</html>
+
